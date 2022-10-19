@@ -3,7 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 // import QRScan from "./components/qrreader";
 // import Test from "./components/qr";
-import Html5QrcodePlugin from './components/Html5QrcodePlugin';
+
+
+///// TEMP DISABLE!!  import Html5QrcodePlugin from './components/Html5QrcodePlugin';
+
 
 import { ScanListItem } from './components/scanneditem';
 
@@ -57,11 +60,12 @@ function App() {
       })}
 
       <div className='myscan'>
-        <Html5QrcodePlugin 
+        SCANNER HERE!
+        {/* <Html5QrcodePlugin 
             fps={10}
             qrbox={500}
             disableFlip={false}
-            qrCodeSuccessCallback={handleScan}/>
+            qrCodeSuccessCallback={handleScan}/> */}
       </div>
 
       {new Date().toISOString()}

@@ -9,12 +9,12 @@ jobs:
     concurrency: ci-${{github.ref}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Configure Node
         uses: actions/setup-node@v1
         with:
-            nodew-version: '???'
+            nodew-version: '16.15.1'
         
       - name: Install
         run:

@@ -8,21 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     concurrency: ci-${{github.ref}}
     steps:
-      -name: Checkout
-       uses: actions/checkout@v2
-       
-       -name: Configure Node
-       uses: actions/setup-node@v1
-       with:
-        nodew-version: '???'
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Configure Node
+        uses: actions/setup-node@v1
+        with:
+            nodew-version: '???'
         
-       -name: Install
+      - name: Install
         run:
             # npm ci
             npm run build
             
-       -name: Deploy
-       uses: JamesIves/github-pages-deploy-action@v4
-       with:
-        folder: build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: build
           branch: gh-pages

@@ -17,10 +17,10 @@ jobs:
             node-version: '16.15.1'
         
       - name: Install
-        run: 
-          npm help install
-          npm i
-          npm run build
+        run: npm i
+        
+      - name: Build
+        run: npm run build
             
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
